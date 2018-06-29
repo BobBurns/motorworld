@@ -38,6 +38,8 @@ func routeOutput (w http.ResponseWriter, r *http.Request) {
        Private: false,
        },
     }
+
+    // TODO handle access tokens by reading file instead of args
     at := os.Args[1]
 
     switch(q) {
@@ -45,6 +47,14 @@ func routeOutput (w http.ResponseWriter, r *http.Request) {
       event.Data.Data = "on"
     case "off":
       event.Data.Data = "off"
+    case "reverse":
+      event.Data.Data = "rev"
+    case "fast":
+      event.Data.Data = "fast"
+    case "med":
+      event.Data.Data = "med"
+    case "slow":
+      event.Data.Data = "slow"
     }
 
     result, err := event.Publish(at)
