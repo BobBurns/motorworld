@@ -31,3 +31,10 @@ Start Server
 Access Server at `localhost:8082/data`
 
 ![Alt text](/data/motoworld.png?raw=true )
+
+
+### Disclaimer
+
+Take care not to be vulnerable to DNS rebinding attacks when running on your
+local LAN
+https://medium.com/@brannondorsey/attacking-private-networks-from-the-internet-with-dns-rebinding-ea7098a2d325
